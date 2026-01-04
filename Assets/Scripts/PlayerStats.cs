@@ -64,7 +64,7 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         // Handle level ups (with EXP carry-over)
-        bool leveledUp = false;
+        bool levelledUp = false;
 
         while (currentExp >= maxExp)
         {
@@ -77,11 +77,11 @@ public class PlayerStats : MonoBehaviour
             // Recalculate requirement for the *next* level
             maxExp = CalculateMaxExpForLevel(level);
 
-            leveledUp = true;
+            levelledUp = true;
         }
 
-        // Only trigger visuals / text if we actually leveled up
-        if (leveledUp)
+        // Only trigger visuals / text if we actually levelled up
+        if (levelledUp)
         {
             if (levelUpIcon != null)
             {

@@ -619,11 +619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1591184179 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4510873592003935146, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
-  m_PrefabInstance: {fileID: 1273516948747650727}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1870260153 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8503485062542063693, guid: 9b641cf8a4f9dae489b5207f7f602c2d, type: 3}
@@ -661,7 +656,7 @@ MonoBehaviour:
   maxHealth: 20
   currentMagic: 1
   maxMagic: 20
-  currentExp: 0
+  currentExp: 22
   maxExp: 20
   currentStatPoints: 0
   strength: 0
@@ -1251,7 +1246,7 @@ PrefabInstance:
     - target: {fileID: 9141699914644465352, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
       propertyPath: attackHitbox
       value: 
-      objectReference: {fileID: 1591184179}
+      objectReference: {fileID: 0}
     - target: {fileID: 9141699914644465352, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 8
@@ -1260,7 +1255,11 @@ PrefabInstance:
     - {fileID: 4905632376794785847, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
     - {fileID: 9141699914644465352, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
     - {fileID: 969103960023120390, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
-    m_RemovedGameObjects: []
+    - {fileID: 6814585302502319017, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
+    - {fileID: 2868522629902750837, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 1791208678214533087, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
+    - {fileID: 4510873592003935146, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6680749949779604824, guid: 416839b791d7b8547b1bfdf525fbcede, type: 3}
