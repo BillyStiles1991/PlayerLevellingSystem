@@ -133,4 +133,4 @@ In the Inspector, set starting stats so the UI displays correctly immediately:
 
 ### E) To test
 
-**Adjust values on the Player GameObject when running the unity scene** This will show the component working, gradually increase the exp 'Current exp' field in order to see levels progressing and experience needed accelerating as levels get higher.
+**Adjust values on the Player>Player Stats (Script) GameObject when running the unity scene** This will show the component working, gradually increase the exp 'Current exp' field in order to see levels progressing and experience needed accelerating as levels get higher.
