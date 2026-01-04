@@ -3,12 +3,12 @@
 # Unity Scripts and Unity Inspector information  — Player Stats, EXP Levelling + UI Bars
 
 ## 1) Overview 
-This script provides a complete **player stats + leveling** system with UI support:
+This script provides a complete **player stats + levelling** system with UI support:
 - Tracks **health, magic, EXP, level, and stat points**
 - Handles **level-up logic with EXP carry-over**
 - Calculates **increasing EXP requirements** using a curved growth system with 5-level “tiers”
 - Updates **UI sliders + text displays** for health/magic/EXP
-- Shows a **Level Up icon** that fades out after leveling
+- Shows a **Level Up icon** that fades out after levelling
 
 This is designed for RPG / action-RPG / progression-based games where the player collects EXP and levels up.
 
@@ -28,7 +28,7 @@ Manages player progression, resources, and UI.
   - `currentStatPoints`
   - attributes like `strength, speed, stamina, dexterity, agility`
 
-**Leveling logic (Update loop)**
+**levelling logic (Update loop)**
 - Checks if `currentExp >= maxExp`.
 - If yes, it levels up **as many times as needed** using a `while` loop (handles large EXP gains).
 - On each level-up:
@@ -107,7 +107,7 @@ On the Player object (with PlayerStats attached), drag these into the fields:
 **Level Up icon**
 - Create an Image (UI → Image) that says/looks like “Level Up”
 - Assign it to `levelUpIcon`
-- The script will hide it at Start and fade it out when leveling occurs
+- The script will hide it at Start and fade it out when levelling occurs
 
 ---
 
@@ -136,4 +136,4 @@ In the Inspector, set starting stats so the UI displays correctly immediately:
 **Adjust values on the Player>Player Stats (Script) GameObject when running the unity scene** This will show the component working, gradually increase the exp 'Current exp' field in order to see levels progressing and experience needed accelerating as levels get higher.
 
 ## Files included
-- `PlayerStats.cs' — a complete player stats + leveling system with UI support
+- `PlayerStats.cs' — levelling, EXP curve calculation, stat points, and UI (sliders + text + level-up icon fade)
