@@ -111,7 +111,7 @@ On the Player object (with PlayerStats attached), drag these into the fields:
 
 ---
 
-### D) Set initial values (important)
+### D) Set initial values
 In the Inspector, set starting stats so the UI displays correctly immediately:
 
 **Example starting values**
@@ -127,9 +127,10 @@ In the Inspector, set starting stats so the UI displays correctly immediately:
 - `firstTierBonus = 0.1` (extra growth beginning at levels 6–10)
 - `tierBonusMultiplier = 0.2` (controls how tier bonuses ramp)
 
-> Note: `tierBonusMultiplier` is used like a “power base” in the tier bonus formula.  
-> Values below 1 can produce unwanted curves. If your EXP requirements is off, try values **> 1** (e.g., 1.1–1.3) for a more typical acceleration of the curve.
+> Note: Values below 1 can produce unwanted curves. If your EXP requirements is off, try values **> 1** (e.g., 1.1–1.3) for a more typical acceleration of the curve.
 
 ---
+
+### E) To test
 
 **Adjust values on the Player GameObject when running the unity scene** This will show the component working, gradually increase the exp 'Current exp' field in order to see levels progressing and experience needed accelerating as levels get higher.
