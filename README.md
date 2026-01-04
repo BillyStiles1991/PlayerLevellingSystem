@@ -1,8 +1,8 @@
 # PlayerLevellingSystem
 
-# Unity Scripts and Unity Inspector setup information  — Project 3: Player Stats, EXP Leveling + UI Bars
+# Unity Scripts and Unity Inspector information  — Player Stats, EXP Levelling + UI Bars
 
-## 1) Project overview (what this Unity project is)
+## 1) Overview 
 This script provides a complete **player stats + leveling** system with UI support:
 - Tracks **health, magic, EXP, level, and stat points**
 - Handles **level-up logic with EXP carry-over**
@@ -14,9 +14,9 @@ This is designed for RPG / action-RPG / progression-based games where the player
 
 ---
 
-## 2) Script description (what the script does)
+## 2) Script description
 
-### `PlayerStats.cs`
+### PlayerStats.cs
 Manages player progression, resources, and UI.
 
 **Core stats**
@@ -40,7 +40,7 @@ Manages player progression, resources, and UI.
 **EXP requirement curve**
 - Uses `CalculateMaxExpForLevel(level)`:
   - Starts with a gentle base growth (`baseGrowthPerLevel`)
-  - Adds extra growth bonuses in **5-level tiers** (1–5, 6–10, 11–15, ...)
+  - Adds extra growth bonuses in **5-level tiers** (1–5, 6–10, 11–15, etc.)
   - Tier bonuses increase progressively using a multiplier (`tierBonusMultiplier`)
   - Final result is exponential-style scaling:
     `baseExpRequirement * growthPerLevel^(level - 1)`
@@ -64,7 +64,7 @@ Manages player progression, resources, and UI.
 ## 3) How to set up the project in the Unity Inspector
 
 ### A) Add the script to your Player
-1. Select your Player GameObject
+1. Create / Select your Player GameObject
 2. Attach `PlayerStats.cs`
 
 ---
@@ -77,7 +77,7 @@ In your Canvas, create:
 
 For each slider:
 1. Set a sensible min/max in the Slider component (the script will overwrite max at runtime)
-2. (Recommended) Set the slider “Handle” to optional / style as you like
+2. (Recommended) Remove slider handle + style as you like
 
 Create TextMeshPro UI labels:
 - `healthSliderDisplay` (e.g., "50 / 100")
@@ -115,8 +115,8 @@ On the Player object (with PlayerStats attached), drag these into the fields:
 In the Inspector, set starting stats so the UI displays correctly immediately:
 
 **Example starting values**
-- `maxHealth = 100`, `currentHealth = 100`
-- `maxMagic = 25`, `currentMagic = 25`
+- `maxHealth = 20`, `currentHealth = 20`
+- `maxMagic = 20`, `currentMagic = 20`
 - `currentExp = 0`
 - `level = 1` (serialized private)
 - `currentStatPoints = 0`
@@ -128,12 +128,8 @@ In the Inspector, set starting stats so the UI displays correctly immediately:
 - `tierBonusMultiplier = 0.2` (controls how tier bonuses ramp)
 
 > Note: `tierBonusMultiplier` is used like a “power base” in the tier bonus formula.  
-> Values below 1 can produce unusual curves. If your EXP requirements feel off, try values **> 1** (e.g., 1.1–1.3) for a more typical accelerating progression curve.
+> Values below 1 can produce unwanted curves. If your EXP requirements is off, try values **> 1** (e.g., 1.1–1.3) for a more typical acceleration of the curve.
 
 ---
 
-### E) Hooking EXP gain from collectables (optional)
-If your EXP orb script destroys itself on pickup, you can award EXP like this when the player collides:
-
-```csharp
-other.GetComponent<PlayerStats>().currentExp += expValue;
+**Adjust values on the Player GameObject when running the unity scene** This will show the component working, gradually increase the exp 'Current exp' field in order to see levels progressing and experience needed accelerating as levels get higher.
