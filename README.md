@@ -1,6 +1,6 @@
 # PlayerLevellingSystem
 
-# Unity Scripts and Unity  — Project 3: Player Stats, EXP Leveling + UI Bars
+# Unity Scripts and Unity Inspector setup information  — Project 3: Player Stats, EXP Leveling + UI Bars
 
 ## 1) Project overview (what this Unity project is)
 This script provides a complete **player stats + leveling** system with UI support:
