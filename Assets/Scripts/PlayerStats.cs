@@ -5,6 +5,8 @@ using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
+   // A combination of tutorial: https://www.youtube.com/watch?v=6qX1zh1TMRQ and Chatgpt to adjust for need.
+    
     [SerializeField] private int level = 1;
 
     [Header("EXP Growth Settings")]
