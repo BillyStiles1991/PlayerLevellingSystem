@@ -137,3 +137,4 @@ In the Inspector, set starting stats so the UI displays correctly immediately:
 
 ## Files included
 - `PlayerStats.cs' — levelling, EXP curve calculation, stat points, and UI (sliders + text + level-up icon fade)
+
